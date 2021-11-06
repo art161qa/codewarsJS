@@ -1,22 +1,30 @@
-//let arrayOfNumbers =  [-3,1,2,3,4,5,6,7,8,9]
+/*
+Given n, take the sum of the digits of n.
+ If that value has more than one digit, continue reducing in this way until a single-digit number is produced. 
+ The input will be a non-negative integer.
+*/
 
-function selectRequiredNumbersAndMultiplyThem (number){
-  if (number < 0) return 0
-  let arr = []
-  let resultArray = []
-  for (let i= 0; i < number; i++){
-    arr.push(i)
-  }
-  for (let i = 0; i < arr.length; i++){
-    
-    if (arr[i]% 3 == 0 || arr[i]%5 == 0){
-      resultArray.push(arr[i])
+let someNumber = 493193
+
+function returnSum (number){
+    number = String(number)
+    let sum = 0
+    let resultSum = 0
+    for (let i = 0; i < number.length; i++){
+        sum += +number[i]
     }
-  }
-  let res =  resultArray.reduce(function (summ, item) {
-    return summ + item
-  }, 0)
-  return res
-}
+    sum = String(sum)
+    if (sum.length > 1){
+        for (let i = 0; i < sum.length; i++){
+                resultSum += +sum[i]
+            }
+            return resultSum
+        }
+    else {
+            resultSum = +sum
+            return resultSum
+        }
+    }
 
-console.log(selectRequiredNumbersAndMultiplyThem(10))
+
+console.log(returnSum(someNumber))
