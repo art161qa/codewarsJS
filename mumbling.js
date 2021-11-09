@@ -14,24 +14,13 @@ function accum(str) {
     let result = ""
     for (let i = 0; i < str.length; i++){
 
-      if(i == str.length - 1){
-        if (str[i] === str[i].toUpperCase()){
+        if(i == str.length - 1){
             result += str[i].toUpperCase() + str[i].toLowerCase().repeat(i)
         }
-        else { 
-            result += str[i].toUpperCase() + str[i].repeat(i)
-        }
-          
-      }
-      else{
-        if (str[i] === str[i].toUpperCase()){
+        else{
             result += str[i].toUpperCase() + str[i].toLowerCase().repeat(i) + '-'
         }
-        else { 
-          result += str[i].toUpperCase() + str[i].repeat(i) + '-'
-          }
-      }
-  }
-  return result
+    }
+    return result
 }
 console.log(accum(beforeStr))
