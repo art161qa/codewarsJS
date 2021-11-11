@@ -14,16 +14,13 @@ function returnSum (number){
         sum += +number[i]
     }
     sum = String(sum)
-    if (sum.length > 1){
+    while (sum.length > 1){
         for (let i = 0; i < sum.length; i++){
-                resultSum += +sum[i]
-            }
-            return resultSum
+            sum += +sum[i]
+            sum = String(sum)
         }
-    else {
-            resultSum = +sum
-            return resultSum
-        }
+    }
+    return sum
     }
 
 
