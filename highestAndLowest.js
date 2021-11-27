@@ -1,4 +1,4 @@
-numb = "8 3 -5 42 -1 0 0 -9 4 7 4 -4"
+numb = "8 3 -5 42 -1 0 0 -9 4 7 5 -4"
 
 function highAndLow(numbers){
     let arrNum = numbers.split(' ')
