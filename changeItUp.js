@@ -7,6 +7,8 @@ Makes any consonants lower case
 Note: the alphabet should wrap around, so Z becomes A
 
 So, for example the string "Cat30" would return "dbU30" (Cat30 --> Dbu30 --> dbU30)
+
+https://www.codewars.com/kata/58039f8efca342e4f0000023/javascript
 */
 
 const alphabet = "abcdefghijklmnopqrstuvwxyz".split('')
